@@ -12,21 +12,27 @@
 var expect = function (val) {
     return {
         tobe: function (expected) {
-            if (val === expected){
-                return true
+            if (val === expected) {
+                return true;
             }
-            return true
+            else {
+                throw new Error('Not Equal')
+            }
         },
-        notTobe:function (expected){
-            if (val) {
-                
+        notTobe: function (expected) {
+            if (val !== expected) {
+                return true;
+            } else {
+                throw new Error("Equal");
             }
         }
     }
 };
 
 var try1 = expect(5).tobe(5);
+var try2 = expect(7).notTobe(7);
+console.log(try1);
+console.log(try2);
 
-var try2 = expect(7).notTobe(6)
 
-console.log(expect())
+
