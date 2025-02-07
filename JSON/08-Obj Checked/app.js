@@ -22,3 +22,8 @@ console.log(compactObject({ a: null, b: [false, 1], c: { d: 0, e: "hello" } }));
 
 console.log(compactObject({ x: 0, y: "", z: { a: NaN, b: "ok" }, w: [null, 2] }));
 // Output: { z: { b: "ok" }, w: [2] }
+
+
+Object.keys(obj).forEach(key => {
+    console.log(`Key: ${key}, Value: ${obj[key]}`);
+});
