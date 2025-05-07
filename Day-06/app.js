@@ -1,8 +1,8 @@
-/**
- * @param {number[]} arr
- * @param {Function} fn
- * @return {number[]}
- */
+// /**
+//  * @param {number[]} arr
+//  * @param {Function} fn
+//  * @return {number[]}
+//  */
 
 
 var filter = function (arr, fn) {
@@ -23,5 +23,4 @@ fn = function greaterThan10(n) {
 let newArray = filter(arr, fn);
 
 console.log(newArray);
-console.log('Hello world');
 
